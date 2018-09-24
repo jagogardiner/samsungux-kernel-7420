@@ -1,0 +1,7 @@
+ui_print("OTW Kernel v2.1: An Oreo Samsung UX Kernel for the Samsung S6/e!");
+ui_print("	");
+ui_print("Extracting kernel files...");
+package_extract_file("otw/boot.img", "/dev/block/platform/15570000.ufs/by-name/BOOT");
+ui_print("	");
+ui_print("Enjoy!");
+ui_print("	");
