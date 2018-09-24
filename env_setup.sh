@@ -25,7 +25,7 @@ if [ ! -e /usr/bin/xmllint ]; then
 	sudo apt-get install libxml2-utils
 fi
 
-echo "${bldcya}***** Clean up Environment before compile *****${txtrst}";
+echo "${bldcya}***** Clean up environment before compile *****${txtrst}";
 
 
 # Make clean source
@@ -66,13 +66,13 @@ export ARCH=arm64;
 export SUB_ARCH=arm64;
 
 # G920T
-if [ "$TARGET" = "G920T" ] ; then
-	export KERNEL_CONFIG="custom_defconfig";
+if [ "$TARGET" = "G920F" ] ; then
+	export KERNEL_CONFIG="otw_flat";
 fi;
 
 # G925T
-if [ "$TARGET" = "G925T" ] ; then
-	export KERNEL_CONFIG="custom-zeroltetmo";
+if [ "$TARGET" = "G925F" ] ; then
+	export KERNEL_CONFIG="otw_edge";
 fi;
 
 # build script
@@ -81,7 +81,7 @@ export TMPFILE=`mktemp -t`;
 
 
 # system compiler
-export CROSS_COMPILE=/home/sick/aarch64-linux-gnu-5.3/bin/aarch64-
+export CROSS_COMPILE=/home/jayyyx/aarch64-linux-android-6.x/bin/aarch64-linux-android-
 
 
 # CPU Core
